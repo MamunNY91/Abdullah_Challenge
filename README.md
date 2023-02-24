@@ -11,10 +11,10 @@ terraform apply --auto-approve
 '''
 chmod 400 ubuntu-key-pair.pem
 '''
-3. open envVars.env file and replace PGHOST with db_host printed by terraform , PGUSER and PGPASS with value you entered during provisioning of the infrastructure.
-4. Deploy the Django application as a Docker container; Replace the public_dns name of the remote server defined in Ansible's host file with the value Terraform printed out. Replace the value of the environment variable PGHOST defined in the docker-compose file with the value of db_host printed by Terraform and replace PGUSER and PGPASS with value you entered when provisioning infrastructure. Navigate to the Ansible directory and run the following command:
+
+4. Deploy webserver ,configure it to use SSL and redirect http to https using Ansible:
 '''
-ansible-playbook -i hosts playbook.yaml  
+ansible-playbook -i hosts.ini playbook.yaml  
 '''
 
 
