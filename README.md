@@ -1,6 +1,6 @@
 
 
-# Steps to deploy this application to AWS
+# Steps to deploy static site to AWS
 
 1. Provision infrastructure using Terraform. Provide aws_access_key and aws_secret_key when asked. Navigate to the Terraform directory.Execute the following commands:
 '''
